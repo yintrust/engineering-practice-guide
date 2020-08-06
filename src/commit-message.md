@@ -54,7 +54,7 @@ Tips：如果你的开源项目也遵循 **约定式提交** 规范，不妨在 
 
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
-> **_SEEALSO:_** 
+> **_SEEALSO:_**
 >
 > 阮一峰写的关于 commit message 的博客：[Commit message 和 Change log 编写指南](https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
 >
