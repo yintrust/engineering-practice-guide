@@ -3,6 +3,8 @@
 ![workflow badge](https://github.com/yintrust/engineering-practice-guide/workflows/github-pages/badge.svg)
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/yintrust/engineering-practice-guide)
 ![GitHub repo size](https://img.shields.io/github/repo-size/yintrust/engineering-practice-guide)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![Keep a Changelog v1.1.0 badge](https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.1.0-%23E05735)](https://keepachangelog.com/zh-CN/1.0.0/)
 
 文档托管在 GitHub Pages，在线访问地址：<https://yintrust.github.io/engineering-practice-guide>
 
