@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Engineering Practice Guide</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="commit-message.html"><strong aria-hidden="true">2.</strong> commit message</a></li><li class="chapter-item expanded "><a href="changelog.html"><strong aria-hidden="true">3.</strong> changelog</a></li><li class="chapter-item expanded "><a href="version-number.html"><strong aria-hidden="true">4.</strong> 版本号</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Engineering Practice Guide</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        <a href="https://github.com/yintrust/engineering-practice-guide" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#工程化实践指南" id="工程化实践指南">工程化实践指南</a></h1>
+<h1><a class="header" href="#commit-message" id="commit-message">commit message</a></h1>
+<p>编写规范的 commit message 不仅可以让别人清晰的了解对代码所作的更改，还能便捷的生成 changelog。</p>
+<p>事实上，<a href="https://www.conventionalcommits.org/zh-hans/v1.0.0-beta.4/">约定式提交</a> 就是针对编写 commit message 的一系列规范。
+按照此规范，commit message 的结构应如下所示：</p>
+<pre><code class="language-text">&lt;类型&gt;[可选的作用域]: &lt;描述&gt;
+
+[可选的正文]
+
+[可选的脚注]
+</code></pre>
+<p>其中，类型指此次提交所属的类型；作用域 <strong>必须</strong> 是一个描述某部分代码的名词，并用圆括号包围；
+描述指的是对代码变更的简短总结；正文为代码变更提供额外的上下文信息；
+脚注 <strong>必须</strong> 包含关于提交的元信息，例如：关联的合并请求、Reviewer、破坏性变更，每条元信息一行。</p>
+<p><a href="https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit">Angular Commit Message Guidelines</a> 中提供了 9 种可选的类型，我们参考此使用以下类型：</p>
+<ul>
+<li><code>fix</code>：修复 bug</li>
+<li><code>feat</code>：新功能</li>
+<li><code>refactor</code>：既没有修复 bug 也没有添加新功能的代码更改</li>
+<li><code>test</code>：添加缺失的测试或更正现有的测试</li>
+<li><code>style</code>：不会影响代码含义的更改（空格，格式，缺少分号等）</li>
+<li><code>perf</code>：提高性能的代码更改</li>
+<li><code>docs</code>：仅文档更改</li>
+<li><code>chore</code>：修改工具相关（包括但不限于文档、代码生成等）</li>
+</ul>
+<p>按照上述规范，一个典型的 commit message 如下所示：</p>
+<pre><code class="language-text">fix: correct minor typos in code
+
+see the issue for details on the typos fixed
+
+closes issue #12
+</code></pre>
+<p>以下是一些遵守此规范的开源项目，可供参考：</p>
+<ul>
+<li><a href="https://github.com/angular/angular">Angular</a></li>
+<li><a href="https://github.com/electron/electron">Electron</a></li>
+<li><a href="https://github.com/eggjs/egg">egg</a></li>
+</ul>
+<p>Tips：如果你的开源项目也遵循 <strong>约定式提交</strong> 规范，不妨在 README 文件中加上徽章吧！</p>
+<pre><code class="language-text">[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+</code></pre>
+<p>显示效果如下：</p>
+<p><a href="https://conventionalcommits.org"><img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" alt="Conventional Commits" /></a></p>
+<blockquote>
+<p><strong><em>SEEALSO:</em></strong></p>
+<p>阮一峰写的关于 commit message 的博客：<a href="https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html">Commit message 和 Change log 编写指南</a></p>
+<p>知乎上关于 commit message 的讨论：<a href="https://www.zhihu.com/question/21209619">如何写好 Git commit log?</a></p>
+</blockquote>
+<h1><a class="header" href="#changelog" id="changelog">changelog</a></h1>
+<p>一个规范的项目必然要提供 changelog，每个人都需要 changelog 以知晓项目在不同版本之间的差别。</p>
+<p>changelog 的规范各不相同，不过，
+<a href="https://keepachangelog.com/zh-CN/1.0.0/">keep a changelog</a> 项目可以给你一些关于编写 changelog 的相关建议。</p>
+<p>如果你的项目遵循前面提到的 <strong>约定式提交</strong> 规范，
+那么你可以使用 <a href="https://github.com/conventional-changelog/conventional-changelog">Conventional Changelog</a> 工具将 commit message 转换为 changelog。</p>
+<p>Tips：如果你的开源项目也采纳了 <strong>keep a changelog</strong> 的相关建议，不妨在 README 文件中加上徽章吧！</p>
+<pre><code class="language-text">[![Keep a Changelog v1.1.0 badge](https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.1.0-%23E05735)](https://keepachangelog.com/zh-CN/1.0.0/)
+</code></pre>
+<p>显示效果如下：</p>
+<p><a href="https://keepachangelog.com/zh-CN/1.0.0/"><img src="https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.1.0-%23E05735" alt="Keep a Changelog v1.1.0 badge" /></a></p>
+<h1><a class="header" href="#版本号" id="版本号">版本号</a></h1>
+<p>版本号的规范可参考 <a href="https://semver.org/lang/zh-CN/">语义化版本</a> 。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
