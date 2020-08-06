@@ -1,0 +1,9 @@
+[book]
+authors = ["yintrust"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Engineering Practice Guide"
+
+[output.html]
+git-repository-url = "https://github.com/yintrust/engineering-practice-guide"
